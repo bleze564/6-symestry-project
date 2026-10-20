@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980" role="img" aria-labelledby="title desc">
+  <title id="title">План сборки страницы входа InvestIQ</title>
+  <desc id="desc">Макет страницы входа с пронумерованными зонами и последовательностью разработки.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#263044" flood-opacity=".12"/></filter>
+    <style>
+      .ui { font-family: Inter, Arial, sans-serif; }
+      .title { font: 700 30px Inter, Arial, sans-serif; fill: #252331; }
+      .sub { font: 15px Inter, Arial, sans-serif; fill: #716b7a; }
+      .label { font: 700 13px Inter, Arial, sans-serif; fill: #fff; }
+      .body { font: 14px Inter, Arial, sans-serif; fill: #353241; }
+      .muted { font: 12px Inter, Arial, sans-serif; fill: #716b7a; }
+      .stephead { font: 700 15px Inter, Arial, sans-serif; fill: #292636; }
+      .steptext { font: 13px Inter, Arial, sans-serif; fill: #605b69; }
+      .num { fill: #1687e8; stroke: #fff; stroke-width: 3; }
+      .rule { stroke: #c9c4d1; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="1500" height="980" fill="#f7f6fa"/>
+  <text x="56" y="62" class="title">Одна форма: вход и регистрация</text>
+  <text x="56" y="91" class="sub">Общий экран и поля делаем один раз; режим меняет подписи, проверки и действие.</text>
+
+  <!-- Screen preview -->
+  <g transform="translate(56 130)">
+    <rect width="850" height="610" rx="16" fill="#fff" stroke="#dedbe5"/>
+    <rect width="850" height="42" rx="16" fill="#fff"/>
+    <path d="M0 42h850" stroke="#e8e5ed"/>
+    <rect x="18" y="10" width="27" height="23" rx="7" fill="#ff7022"/>
+    <text x="28" y="27" font-family="Arial,sans-serif" font-size="14" font-weight="800" fill="#111">IN</text>
+    <text x="46" y="27" font-family="Arial,sans-serif" font-size="12" font-weight="800" fill="#111">VESTIQ</text>
+    <rect x="0" y="43" width="850" height="350" fill="#f4f5fa"/>
+    <path d="M0 350 Q30 393 90 393 H850 V610 H0Z" fill="#fff"/>
+    <!-- quiet background decoration -->
+    <g fill="none" stroke="#e0e3ed" stroke-width="3" opacity=".9">
+      <circle cx="63" cy="105" r="12"/><path d="M63 97v16m-5-11h8m-8 6h8"/>
+      <path d="M160 118l22-12 8 19-22 12zM172 106v-15l24-7 9 28"/>
+      <rect x="300" y="82" width="28" height="50" rx="5" transform="rotate(-12 300 82)"/><path d="M306 95h17m-17 8h17m-17 8h12"/>
+      <circle cx="490" cy="102" r="14"/><path d="M490 93v18m-6-12h10m-10 7h10"/>
+      <path d="M686 112h26v-24h-26zm0-12h26m-13-12v24m13-18 19-9v27"/>
+      <circle cx="775" cy="147" r="11"/><path d="M775 140v14m-5-10h9m-9 5h9"/>
+    </g>
+    <!-- brand -->
+    <text x="148" y="296" font-family="Arial,sans-serif" font-size="72" font-weight="800" letter-spacing="-3" fill="#080808">InvestIQ</text>
+    <text x="198" y="326" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#565563">SMART FINANCE</text>
+    <!-- login card -->
+    <rect x="487" y="78" width="292" height="357" rx="24" fill="#fff" filter="url(#shadow)"/>
+    <text x="545" y="121" class="muted">Авторизуйтесь через Google</text>
+    <rect x="548" y="137" width="170" height="35" rx="18" fill="#f5f6fa"/>
+    <text x="583" y="160" class="body" font-weight="700">G  Google</text>
+    <text x="545" y="198" class="muted">Или войдите с почтой и паролем</text>
+    <text x="545" y="226" class="muted">Электронная почта</text>
+    <rect x="545" y="237" width="177" height="37" rx="19" fill="#f5f6fa"/>
+    <text x="560" y="260" class="muted" fill="#a3a9b7">you@email.com</text>
+    <text x="545" y="300" class="muted">Пароль</text>
+    <rect x="545" y="311" width="177" height="37" rx="19" fill="#f5f6fa"/>
+    <circle cx="565" cy="329" r="3" fill="#15141a"/><circle cx="577" cy="329" r="3" fill="#15141a"/><circle cx="589" cy="329" r="3" fill="#15141a"/><circle cx="601" cy="329" r="3" fill="#15141a"/>
+    <rect x="545" y="371" width="90" height="34" rx="13" fill="#ff7022"/>
+    <text x="570" y="392" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#fff">ВОЙТИ</text>
+    <rect x="645" y="371" width="105" height="34" rx="13" fill="#f5f6fa"/>
+    <text x="660" y="392" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#5b5965">РЕГИСТРАЦИЯ</text>
+    <!-- numbered annotations -->
+    <g>
+      <circle cx="26" cy="21" r="13" class="num"/><text x="22" y="26" class="label">1</text>
+      <circle cx="135" cy="245" r="13" class="num"/><text x="131" y="250" class="label">2</text>
+      <circle cx="770" cy="90" r="13" class="num"/><text x="766" y="95" class="label">3</text>
+      <circle cx="532" cy="240" r="13" class="num"/><text x="528" y="245" class="label">4</text>
+      <circle cx="739" cy="386" r="13" class="num"/><text x="735" y="391" class="label">5</text>
+      <circle cx="60" cy="425" r="13" class="num"/><text x="56" y="430" class="label">6</text>
+    </g>
+  </g>
+
+  <!-- Learning steps -->
+  <g transform="translate(950 142)">
+    <text x="0" y="0" class="title" font-size="22">Порядок работы</text>
+    <text x="0" y="27" class="sub">Один шаг — одна понятная задача</text>
+    <g transform="translate(0 65)">
+      <circle cx="16" cy="15" r="15" fill="#1687e8"/><text x="12" y="20" class="label">1</text>
+      <text x="44" y="12" class="stephead">Разметка экрана</text>
+      <text x="44" y="34" class="steptext">Header, основная область, логотип</text><text x="44" y="52" class="steptext">и карточка входа. Пока без поведения.</text>
+      <path d="M44 70h470" class="rule"/>
+    </g>
+    <g transform="translate(0 153)">
+      <circle cx="16" cy="15" r="15" fill="#1687e8"/><text x="12" y="20" class="label">2</text>
+      <text x="44" y="12" class="stephead">Общий каркас и фон</text>
+      <text x="44" y="34" class="steptext">Задай базовый шрифт, цвета и отступы.</text><text x="44" y="52" class="steptext">Декоративные картинки добавь позже.</text>
+      <path d="M44 70h470" class="rule"/>
+    </g>
+    <g transform="translate(0 241)">
+      <circle cx="16" cy="15" r="15" fill="#1687e8"/><text x="12" y="20" class="label">3</text>
+      <text x="44" y="12" class="stephead">Левая часть: бренд</text>
+      <text x="44" y="34" class="steptext">Добавь InvestIQ и подпись SMART FINANCE.</text><text x="44" y="52" class="steptext">Сначала добейся похожего размера и позиции.</text>
+      <path d="M44 70h470" class="rule"/>
+    </g>
+    <g transform="translate(0 329)">
+      <circle cx="16" cy="15" r="15" fill="#1687e8"/><text x="12" y="20" class="label">4</text>
+      <text x="44" y="12" class="stephead">Общая карточка и форма</text>
+      <text x="44" y="34" class="steptext">Собери её один раз: Google, почта, пароль</text><text x="44" y="52" class="steptext">и кнопки. Не копируй Login и Register целиком.</text>
+      <path d="M44 70h470" class="rule"/>
+    </g>
+    <g transform="translate(0 417)">
+      <circle cx="16" cy="15" r="15" fill="#1687e8"/><text x="12" y="20" class="label">5</text>
+      <text x="44" y="12" class="stephead">Два режима одной формы</text>
+      <text x="44" y="34" class="steptext">`mode="login"` или `mode="register"` меняет</text><text x="44" y="52" class="steptext">заголовок, подписи, проверку и отправку.</text>
+      <path d="M44 70h470" class="rule"/>
+    </g>
+    <g transform="translate(0 505)">
+      <circle cx="16" cy="15" r="15" fill="#1687e8"/><text x="12" y="20" class="label">6</text>
+      <text x="44" y="12" class="stephead">Проверка режимов</text>
+      <text x="44" y="34" class="steptext">Сверь вход и регистрацию: общий вид должен</text><text x="44" y="52" class="steptext">совпадать, различается только нужное поведение.</text>
+    </g>
+  </g>
+  <rect x="56" y="780" width="1388" height="1" fill="#dedbe5"/>
+  <text x="56" y="817" class="stephead">Что общее, а что отличается</text>
+  <text x="56" y="845" class="steptext">Общее: карточка, стили, поля и кнопка Google. Меняется: текст кнопки, проверка и действие по submit. Дополнительное поле добавим только если оно есть в макете.</text>
+  <text x="56" y="910" class="muted">Адаптив и настоящую Google-авторизацию пока отложим. Схема учебная; пропорции приблизительные.</text>
+</svg>

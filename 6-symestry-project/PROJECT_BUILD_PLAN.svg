@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1580" viewBox="0 0 1320 1580" role="img" aria-labelledby="title desc">
+  <title id="title">План сборки проекта InvestIQ</title>
+  <desc id="desc">Пошаговый план учебного приложения для управления доходами и расходами.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; }
+      .title { font-size: 34px; font-weight: 750; fill: #24212d; }
+      .subtitle { font-size: 16px; fill: #6e6878; }
+      .cardTitle { font-size: 18px; font-weight: 700; fill: #282532; }
+      .desc { font-size: 14px; fill: #615c6b; }
+      .tag { font-size: 12px; font-weight: 700; fill: #7250a3; }
+      .num { font-size: 16px; font-weight: 700; fill: white; }
+      .small { font-size: 13px; fill: #655f6e; }
+    </style>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#282532" flood-opacity=".07"/></filter>
+  </defs>
+  <rect width="1320" height="1580" fill="#f8f7fb"/>
+  <text x="70" y="75" class="title">InvestIQ — план сборки проекта</text>
+  <text x="70" y="108" class="subtitle">Делай по этапам: сначала рабочий сценарий, потом оформление и адаптив.</text>
+  <rect x="70" y="137" width="1180" height="58" rx="15" fill="#fff2e9"/>
+  <circle cx="98" cy="166" r="12" fill="#ff751d"/>
+  <text x="123" y="162" class="cardTitle" font-size="15">Уже подготовлено</text>
+  <text x="123" y="181" class="small">React + TypeScript • библиотеки для маршрутов, Redux и форм • общая кнопка с 6 вариантами • галерея кнопок</text>
+
+  <path d="M105 235v1023" fill="none" stroke="#d8cde8" stroke-width="4" stroke-linecap="round"/>
+
+  <g transform="translate(0 220)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">1</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="93" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">НАВИГАЦИЯ</text>
+    <text x="185" y="65" class="cardTitle">Подключить страницы</text>
+    <text x="185" y="88" class="desc">Настроить маршруты: /login, /register и /dashboard. Сделать общий каркас страницы.</text>
+    <text x="1050" y="36" class="small">Router</text>
+  </g>
+  <g transform="translate(0 350)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">2</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="112" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">АВТОРИЗАЦИЯ</text>
+    <text x="185" y="65" class="cardTitle">Собрать вход и регистрацию</text>
+    <text x="185" y="88" class="desc">Переиспользовать одну AuthCard. Formik управляет формой, Yup проверяет поля.</text>
+    <text x="1050" y="36" class="small">Formik + Yup</text>
+  </g>
+  <g transform="translate(0 480)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">3</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="104" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">ДАННЫЕ</text>
+    <text x="185" y="65" class="cardTitle">Определить модель операции</text>
+    <text x="185" y="88" class="desc">Одна запись: id, type, description, category, amount, date. type — income или expense.</text>
+    <text x="1050" y="36" class="small">Transaction</text>
+  </g>
+  <g transform="translate(0 610)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">4</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="120" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">ОПЕРАЦИИ</text>
+    <text x="185" y="65" class="cardTitle">Сделать форму и список</text>
+    <text x="185" y="88" class="desc">Добавление дохода/расхода, очистка полей, таблица операций и удаление записи.</text>
+    <text x="1050" y="36" class="small">CRUD</text>
+  </g>
+  <g transform="translate(0 740)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">5</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="88" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">REDUX</text>
+    <text x="185" y="65" class="cardTitle">Хранить данные приложения</text>
+    <text x="185" y="88" class="desc">Создать store и slices для auth и transactions; селекторами получать список и суммы.</text>
+    <text x="1050" y="36" class="small">Redux Toolkit</text>
+  </g>
+  <g transform="translate(0 870)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">6</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="111" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">СВОДКА</text>
+    <text x="185" y="65" class="cardTitle">Рассчитать баланс и месяцы</text>
+    <text x="185" y="88" class="desc">Баланс = доходы − расходы. Сгруппировать доходы/расходы по месяцам текущего года.</text>
+    <text x="1050" y="36" class="small">Selectors</text>
+  </g>
+  <g transform="translate(0 1000)">
+    <circle cx="105" cy="45" r="22" fill="#7543b5"/><text x="100" y="51" class="num">7</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="111" height="23" rx="11" fill="#efe8f7"/><text x="198" y="33" class="tag">ОТЧЁТЫ</text>
+    <text x="185" y="65" class="cardTitle">Добавить выбор месяца и график</text>
+    <text x="185" y="88" class="desc">По выбранному месяцу показать расходы по категориям. Начальное значение — текущий месяц.</text>
+    <text x="1050" y="36" class="small">Chart.js</text>
+  </g>
+  <g transform="translate(0 1130)">
+    <circle cx="105" cy="45" r="22" fill="#ff751d"/><text x="100" y="51" class="num">8</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="113" height="23" rx="11" fill="#fff0e5"/><text x="198" y="33" class="tag" fill="#d8580c">АДАПТИВ</text>
+    <text x="185" y="65" class="cardTitle">Подстроить под экраны из ТЗ</text>
+    <text x="185" y="88" class="desc">Сначала узкий мобильный экран, затем планшет и desktop; проверить 320–480, 768 и 1200+ px.</text>
+    <text x="1050" y="36" class="small">CSS media queries</text>
+  </g>
+  <g transform="translate(0 1260)">
+    <circle cx="105" cy="45" r="22" fill="#ff751d"/><text x="100" y="51" class="num">9</text>
+    <rect x="160" y="0" width="1090" height="108" rx="18" fill="white" filter="url(#shadow)"/>
+    <rect x="185" y="17" width="100" height="23" rx="11" fill="#fff0e5"/><text x="198" y="33" class="tag" fill="#d8580c">ФИНИШ</text>
+    <text x="185" y="65" class="cardTitle">Пройти сценарии и исправить ошибки</text>
+    <text x="185" y="88" class="desc">Вход/выход, добавление/удаление операций, пустые данные, ошибки форм и production build.</text>
+    <text x="1050" y="36" class="small">Проверка</text>
+  </g>
+
+  <rect x="70" y="1405" width="1180" height="100" rx="18" fill="#fff" stroke="#e6e1ec"/>
+  <text x="95" y="1442" class="cardTitle" font-size="16">Важно для учебного проекта</text>
+  <text x="95" y="1468" class="small">Сначала закончить один путь пользователя целиком. Google-кнопка — только интерфейс, пока нет backend/OAuth.</text>
+  <text x="95" y="1490" class="small">Не подключать одновременно MUI и styled-components: текущие компоненты оформляются обычным CSS.</text>
+  <text x="70" y="1542" class="small">Порядок можно проходить по одному этапу: после каждого шага разберём код и запустим сборку.</text>
+</svg>
