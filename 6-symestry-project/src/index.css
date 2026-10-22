@@ -1,12 +1,15 @@
 :root {
   font-family: "Roboto", sans-serif;
-  color: #282331;
-  background: #f8f6fb;
+  color: #202430;
+  background: #f5f6fb;
 
   --surface: #fff;
-  --border: #e8e2ef;
-  --accent: #7543b5;
-  --muted: #716b7a;
+  --border: #e7e9f1;
+  --accent: #ff741e;
+  --muted: #7d8493;
+  --ink: #202430;
+  --positive: #27936a;
+  --page: #f5f6fb;
 }
 
 * {
@@ -17,6 +20,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--page);
 }
 
 button,

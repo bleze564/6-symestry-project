@@ -1,0 +1,112 @@
+.calculations-main {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 48px, 960px);
+  margin: 0 auto;
+  padding: 20px 0 76px;
+  animation: calculations-enter 650ms cubic-bezier(.2,.75,.25,1) both;
+}
+
+.calculations-toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.calculations-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #858b97;
+  font-size: 11px;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.calculations-back span { color: #ff741e; font-size: 20px; }
+.calculations-back:hover { color: #f0782a; transform: translateX(-2px); }
+
+.calculations-period { display: grid; justify-items: end; gap: 3px; }
+.calculations-period > span { color: #9297a2; font-size: 10px; }
+.calculations-period .month-switcher { border: 0; }
+.calculations-period .month-switcher strong { min-width: 105px; color: #282c35; font-size: 12px; text-align: center; text-transform: capitalize; }
+
+.month-switcher {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border: 1px solid #e8eaf1;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 5px 15px rgb(38 44 65 / 4%);
+}
+
+.month-switcher button {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #f5f6f9;
+  color: #5b6270;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.month-switcher button:not(:disabled):hover { transform: scale(1.06); background: #fff0e5; color: #ef741f; }
+.month-switcher button:disabled { opacity: .35; cursor: default; }
+.month-switcher strong { min-width: 104px; color: #555c68; font-size: 11px; text-align: center; text-transform: capitalize; }
+
+.calculations-totals {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(22px, 5vw, 70px);
+  margin-bottom: 17px;
+  padding: 9px 20px;
+  border: 1px solid #fff;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 12px 30px rgb(37 43 64 / 7%);
+  animation: calculations-totals-enter 550ms 70ms ease both;
+}
+
+.calculations-totals > div { display: flex; align-items: center; gap: 9px; font-size: 11px; }
+.calculations-totals > div > span { color: #5f6571; }
+.calculations-totals strong { font-size: 12px; }
+.calculations-totals__expense { color: #ef5350; }
+.calculations-totals__income { color: #299363; }
+
+@keyframes calculations-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes calculations-totals-enter { from { opacity: .45; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 760px) {
+  .calculations-main { width: min(100% - 28px, 600px); padding-top: 15px; }
+  .calculations-toolbar { grid-template-columns: 1fr 1fr; row-gap: 10px; }
+  .calculations-toolbar > .balance-badge { grid-column: 1 / -1; grid-row: 1; justify-content: center; }
+  .calculations-back { grid-column: 1; grid-row: 2; }
+  .calculations-period { grid-column: 2; grid-row: 2; }
+}
+
+@media (max-width: 480px) {
+  .calculations-main { width: min(100% - 20px, 440px); }
+  .calculations-toolbar { gap: 8px; }
+  .calculations-back { font-size: 10px; }
+  .calculations-period > span { font-size: 9px; }
+  .calculations-period .month-switcher strong { min-width: 85px; font-size: 10px; }
+  .calculations-totals { justify-content: space-around; gap: 8px; padding: 9px 11px; }
+  .calculations-totals > div { gap: 5px; font-size: 10px; }
+  .calculations-totals strong { font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calculations-main, .calculations-totals { animation: none; }
+}

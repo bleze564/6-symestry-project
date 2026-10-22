@@ -5,7 +5,6 @@ export type ButtonVariant =
   | 'white'
   | 'orange'
   | 'orange-shadow'
-  | 'google'
   | 'gray'
   | 'gray-shadow'
 

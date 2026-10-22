@@ -1,0 +1,21 @@
+.balance-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.balance-badge > span {
+  color: #747c8c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.balance-badge > strong {
+  padding: 11px 17px;
+  border: 1px solid rgb(255 255 255 / 92%);
+  border-radius: 14px;
+  background: linear-gradient(120deg, #fff 45%, #fff3e9);
+  box-shadow: 0 8px 22px rgb(38 44 65 / 7%);
+  font-size: 12px;
+  font-weight: 750;
+}

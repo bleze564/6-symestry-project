@@ -1,0 +1,109 @@
+.brand-logo {
+  position: relative;
+  display: inline-flex;
+  width: 126px;
+  height: 44px;
+  flex: 0 0 126px;
+  align-items: center;
+  color: #101010;
+  text-decoration: none;
+  filter: drop-shadow(0 3px 4px rgb(29 35 52 / 8%));
+  transition: transform 240ms cubic-bezier(.2,.75,.25,1), filter 240ms ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 7px 8px rgb(29 35 52 / 15%));
+}
+
+.brand-logo:focus-visible {
+  border-radius: 12px;
+  outline: 3px solid rgb(255 117 29 / 35%);
+  outline-offset: 4px;
+}
+
+.brand-logo__shapes {
+  position: absolute;
+  inset: 0;
+}
+
+.brand-logo__back,
+.brand-logo__front {
+  position: absolute;
+  display: block;
+  border-radius: 16px;
+}
+
+.brand-logo__back {
+  top: 1px;
+  left: 0;
+  width: 64px;
+  height: 40px;
+  background: linear-gradient(145deg, #fff0e7, #ffd8c2);
+  box-shadow: 0 5px 14px rgb(236 111 52 / 12%), inset 0 1px 0 rgb(255 255 255 / 90%);
+  transition: transform 260ms cubic-bezier(.2,.75,.25,1), box-shadow 260ms ease;
+}
+
+.brand-logo__front {
+  top: 9px;
+  left: 11px;
+  width: 61px;
+  height: 34px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ff944e 0%, #ff7425 58%, #f66719 100%);
+  box-shadow: 0 7px 16px rgb(235 91 19 / 27%), inset 0 1px 0 rgb(255 255 255 / 30%), inset 0 -2px 0 rgb(191 66 8 / 12%);
+  transition: transform 260ms cubic-bezier(.2,.75,.25,1), box-shadow 260ms ease;
+}
+
+.brand-logo__front::after {
+  position: absolute;
+  top: -16px;
+  left: -28px;
+  width: 30px;
+  height: 70px;
+  transform: rotate(28deg);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 35%), transparent);
+  content: '';
+  transition: left 450ms cubic-bezier(.2,.75,.25,1);
+}
+
+.brand-logo:hover .brand-logo__back {
+  transform: translate(-2px, -2px) rotate(-3deg);
+  box-shadow: 0 8px 18px rgb(236 111 52 / 18%), inset 0 1px 0 rgb(255 255 255 / 90%);
+}
+
+.brand-logo:hover .brand-logo__front {
+  transform: translate(2px, 1px) rotate(2deg);
+  box-shadow: 0 10px 20px rgb(235 91 19 / 33%), inset 0 1px 0 rgb(255 255 255 / 35%), inset 0 -2px 0 rgb(191 66 8 / 12%);
+}
+
+.brand-logo:hover .brand-logo__front::after {
+  left: 110px;
+}
+
+.brand-logo__wordmark {
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  left: 33px;
+  color: #050505;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  line-height: 1;
+  transition: letter-spacing 260ms ease;
+}
+
+.brand-logo:hover .brand-logo__wordmark {
+  letter-spacing: 0.035em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo,
+  .brand-logo__back,
+  .brand-logo__front,
+  .brand-logo__wordmark,
+  .brand-logo__front::after {
+    transition: none;
+  }
+}

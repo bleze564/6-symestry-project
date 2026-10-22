@@ -1,0 +1,73 @@
+.ambient-background {
+  position: absolute;
+  z-index: 0;
+  inset: 70px 0 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-background__orb {
+  position: absolute;
+  display: block;
+  width: clamp(400px, 55vw, 760px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(clamp(55px, 8vw, 108px));
+  opacity: .7;
+  will-change: transform, opacity;
+}
+
+.ambient-background__orb--orange {
+  top: -25%;
+  left: -19%;
+  background: radial-gradient(circle, rgb(255 153 85 / 42%) 0%, rgb(255 188 137 / 26%) 34%, rgb(255 216 190 / 12%) 53%, transparent 72%);
+  animation: orange-orb-float 31s ease-in-out infinite alternate, orb-glow 17s ease-in-out infinite alternate;
+}
+
+.ambient-background__orb--violet {
+  top: 4%;
+  right: -22%;
+  width: clamp(440px, 61vw, 850px);
+  background: radial-gradient(circle, rgb(153 156 255 / 34%) 0%, rgb(188 191 255 / 23%) 37%, rgb(218 219 255 / 11%) 55%, transparent 73%);
+  animation: violet-orb-float 37s ease-in-out infinite alternate, orb-glow 21s 2s ease-in-out infinite alternate;
+}
+
+.ambient-background__orb--mint {
+  top: 42%;
+  left: 24%;
+  width: clamp(360px, 49vw, 680px);
+  background: radial-gradient(circle, rgb(104 202 172 / 29%) 0%, rgb(158 224 205 / 19%) 38%, rgb(207 241 229 / 10%) 56%, transparent 73%);
+  animation: mint-orb-float 34s ease-in-out infinite alternate, orb-glow 19s 4s ease-in-out infinite alternate;
+}
+
+@keyframes orange-orb-float {
+  from { transform: translate3d(-2%, -1%, 0) scale(.94); }
+  to { transform: translate3d(19%, 13%, 0) scale(1.08); }
+}
+
+@keyframes violet-orb-float {
+  from { transform: translate3d(2%, -3%, 0) scale(1.02); }
+  to { transform: translate3d(-18%, 18%, 0) scale(.92); }
+}
+
+@keyframes mint-orb-float {
+  from { transform: translate3d(-10%, 3%, 0) scale(.9); }
+  to { transform: translate3d(12%, -16%, 0) scale(1.12); }
+}
+
+@keyframes orb-glow {
+  from { opacity: .48; }
+  to { opacity: .76; }
+}
+
+@media (max-width: 720px) {
+  .ambient-background { top: 62px; }
+  .ambient-background__orb { filter: blur(58px); }
+  .ambient-background__orb--orange { left: -45%; }
+  .ambient-background__orb--violet { right: -48%; }
+  .ambient-background__orb--mint { left: 8%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-background__orb { animation: none; }
+}

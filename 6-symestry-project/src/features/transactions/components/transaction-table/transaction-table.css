@@ -1,0 +1,221 @@
+.transaction-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e9ebf2;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 9px 24px rgb(35 41 57 / 4%);
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #353b46;
+  font-size: 13px;
+  text-align: left;
+}
+
+.transaction-table th {
+  padding: 13px 11px;
+  background: #f4f5f9;
+  color: #848b98;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.transaction-table td {
+  padding: 11px;
+  border-top: 1px solid #eff0f5;
+  vertical-align: middle;
+}
+
+.transaction-table tbody tr {
+  transition: background-color 160ms ease;
+}
+
+.transaction-table tbody tr:hover {
+  background: #fff8f2;
+}
+
+.transaction-table__description {
+  max-width: 200px;
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.transaction-table__amount-heading,
+.transaction-table__amount {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.transaction-table__amount {
+  font-weight: 700;
+}
+
+.transaction-table__amount--income {
+  color: #23885e;
+}
+
+.transaction-table__amount--expense {
+  color: #e85f54;
+}
+
+.transaction-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.transaction-category__icon {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--category-color), white 88%);
+  font-size: 14px;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--category-color), white 82%);
+  transition: transform 180ms ease;
+}
+
+.transaction-table tbody tr:hover .transaction-category__icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.transaction-table__delete-cell {
+  width: 42px;
+  text-align: right;
+}
+
+.transaction-table__delete {
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  border: 0;
+  color: #858c99;
+  font-size: 21px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.transaction-table__delete:hover {
+  background: #fff0e7;
+  color: #e66d22;
+}
+
+.transaction-empty {
+  display: grid;
+  min-height: 180px;
+  place-content: center;
+  justify-items: center;
+  border: 1px dashed #e9ebf1;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #fff, #fafafe);
+  color: #858c99;
+  text-align: center;
+}
+
+.transaction-empty__icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  background: #fff2e9;
+  color: #f3792a;
+  font-size: 25px;
+}
+
+.transaction-empty p {
+  margin: 12px 0 4px;
+  color: #353b46;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transaction-empty > span:last-child {
+  font-size: 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 650px) {
+  .transaction-table-wrap {
+    overflow: visible;
+  }
+
+  .transaction-table thead {
+    display: none;
+  }
+
+  .transaction-table,
+  .transaction-table tbody,
+  .transaction-table tr,
+  .transaction-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .transaction-table tr {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 7px 12px;
+    padding: 12px 40px 12px 0;
+    border-top: 1px solid #eef0f4;
+  }
+
+  .transaction-table td {
+    width: auto;
+    padding: 0;
+    border: 0;
+  }
+
+  .transaction-table td::before {
+    display: block;
+    margin-bottom: 4px;
+    color: #858c99;
+    content: attr(data-label);
+    font-size: 10px;
+  }
+
+  .transaction-table__description {
+    max-width: none;
+  }
+
+  .transaction-table__amount {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .transaction-table__delete-cell {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: auto;
+  }
+}
+.transaction-table__error,
+.transaction-table__status {
+  margin: 12px 0;
+  color: #687187;
+  font-size: 0.875rem;
+}
+
+.transaction-table__error {
+  color: #d84242;
+}

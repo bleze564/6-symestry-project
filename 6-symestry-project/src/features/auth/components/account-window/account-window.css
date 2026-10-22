@@ -1,0 +1,121 @@
+.account-window {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  width: 100%;
+  max-width: 402px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 42px 48px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 90%);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgb(38 48 68 / 13%), 0 2px 8px rgb(38 48 68 / 3%), inset 0 1px 0 #fff;
+}
+
+.account-window::before {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 12%;
+  left: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(255 139 75 / 56%), transparent);
+  content: '';
+  pointer-events: none;
+}
+
+.account-window__intro {
+  align-self: center;
+  max-width: 255px;
+  text-align: center;
+}
+
+.account-window > .button--google {
+  align-self: center;
+}
+
+.account-window__hint {
+  max-width: 280px;
+  margin-top: 4px;
+}
+
+.account-window__form {
+  display: grid;
+  width: 100%;
+  gap: 18px;
+}
+
+.account-window__field {
+  display: grid;
+  gap: 8px;
+  color: #25242b;
+  font-size: 12px;
+}
+
+.account-window__field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  outline: none;
+  background: linear-gradient(110deg, #f6f7fa, #f2f4f8);
+  color: #252833;
+  font-size: 13px;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.account-window__field input::placeholder {
+  color: #a3a9b7;
+}
+
+.account-window__field input[aria-invalid='true'] {
+  border-color: #e55a64;
+}
+
+.account-window__error {
+  color: #c63c49;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.account-window__message {
+  width: 100%;
+  margin: -6px 0 0;
+  color: #8b5c25;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.account-window__field input:focus-visible {
+  border-color: #ff9b5d;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgb(255 117 29 / 12%);
+}
+
+.account-window__actions {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.account-window__actions .button {
+  flex: 1 1 125px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.account-window__actions .account-window__switch {
+  border: 0;
+}
+
+@media (max-width: 420px) {
+  .account-window {
+    padding: 32px 24px;
+  }
+}

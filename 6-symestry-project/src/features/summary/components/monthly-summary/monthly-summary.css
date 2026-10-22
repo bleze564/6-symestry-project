@@ -1,0 +1,43 @@
+.panel {
+  position: relative;
+  min-width: 0;
+  padding: 19px;
+  overflow: hidden;
+  border: 1px solid #eef0f5;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff 0%, #fbfbfe 100%);
+  box-shadow: 0 18px 42px rgb(37 40 54 / 8%), inset 0 1px 0 #fff;
+  animation: panel-arrive 600ms cubic-bezier(.2,.75,.25,1) both;
+}
+
+.panel::before {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  left: 22px;
+  height: 2px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, transparent, #ff741e 42%, #ffd5bb 70%, transparent);
+  content: '';
+  opacity: .75;
+}
+
+@keyframes panel-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+.panel-eyebrow { margin: 0 0 6px; color: #a0a4ae; font-size: 9px; font-weight: 800; letter-spacing: .15em; }
+.summary-panel__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.summary-panel__heading h2 { margin: 0; color: #252b36; font-size: 14px; line-height: 1.25; }
+
+.summary-tabs { display: flex; gap: 3px; padding: 3px; border: 1px solid #eceef4; border-radius: 11px; background: #f4f5f9; }
+.summary-tabs button { min-height: 27px; padding: 0 8px; border: 0; border-radius: 7px; background: transparent; color: #818793; font-size: 9px; cursor: pointer; transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease; }
+.summary-tabs button:hover { color: #f0782a; }
+.summary-tabs button.is-active { background: #fff; color: #df6419; box-shadow: 0 3px 9px rgb(37 40 54 / 10%); }
+
+.year-summary__list { display: grid; max-height: 278px; overflow-y: auto; scrollbar-color: #d7dbe4 transparent; scrollbar-width: thin; }
+.year-summary__row { display: flex; min-height: 36px; align-items: center; justify-content: space-between; gap: 10px; padding: 0 7px; border-top: 1px solid #eff0f5; color: #737986; font-size: 9px; text-transform: uppercase; transition: padding 180ms ease, background 180ms ease, color 180ms ease; }
+.year-summary__row:hover { padding-right: 10px; padding-left: 10px; border-radius: 8px; background: #fff5ed; color: #df6419; }
+.year-summary__row strong { color: #555b67; font-size: 10px; font-weight: 650; white-space: nowrap; }
+
+@media (max-width: 760px) { .panel { padding: 17px; } }
+@media (max-width: 420px) { .summary-panel__heading { flex-wrap: wrap; } }
+@media (prefers-reduced-motion: reduce) { .panel { animation: none; } }
